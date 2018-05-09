@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# The Sparky dashboard displays applications from /usr/share/applications dir into yad based window. 
+# Created by Paweł "pavroo" Pijanowski 2018/05/09
+# Copyright 2018 under the GNU GPL2 License
+# Last updated 2018/05/09
+
+yad --width=600 --height=450 --monitor\
+ --icons --read-dir=/usr/share/applications --item-width=100\
+ --sort-by-name --center --undecorated --skip-taskbar --borders=20\
+ --button="Cancel!gtk-cancel":1 --buttons-layout=center --maximized
+
+exit 0
+
+
+
