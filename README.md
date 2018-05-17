@@ -1,5 +1,5 @@
 Sparky Dashboard
-The Sparky dashboard displays applications from /usr/share/applications dir into yad based window. 
+The Sparky dashboard displays installed applications into yad based window. 
 
 Copyright (C) 2018 Paweł Pijanowski
 

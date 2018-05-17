@@ -1,12 +1,22 @@
 #!/bin/bash
 
-# The Sparky dashboard displays applications from /usr/share/applications dir into yad based window. 
+# The Sparky dashboard displays installed applications into yad based window. 
 # Created by Paweł "pavroo" Pijanowski 2018/05/09
 # Copyright 2018 under the GNU GPL2 License
-# Last updated 2018/05/10
+# Last updated 2018/05/17
 
-yad --icons --read-dir=/usr/share/applications --monitor --item-width=100\
+if [ -d /tmp/sparky-dash ]; then
+	rm -rf /tmp/sparky-dash
+fi
+mkdir /tmp/sparky-dash
+cp -a /usr/share/applications/*.desktop /tmp/sparky-dash/
+cd /tmp/sparky-dash
+EXCLUDE=`find * -type f -exec grep -l 'NoDisplay=true' {} \;`
+rm -f $EXCLUDE
+
+yad --icons --read-dir=/tmp/sparky-dash --monitor --item-width=100\
  --sort-by-name --center --undecorated --skip-taskbar --borders=20\
  --button="Cancel!gtk-cancel":1 --buttons-layout=center --maximized
 
+rm -rf /tmp/sparky-dash
 exit 0
