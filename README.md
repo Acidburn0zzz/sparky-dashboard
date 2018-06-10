@@ -1,5 +1,5 @@
 Sparky Dashboard
-The Sparky dashboard displays installed applications into yad based window. 
+The Sparky dashboard displays installed applications into a Yad based window. 
 
 Copyright (C) 2018 Paweł Pijanowski
 
@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Dependencies:
 -------------
+coreutils
 yad
 
 Install:
