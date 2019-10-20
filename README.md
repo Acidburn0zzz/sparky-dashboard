@@ -1,7 +1,7 @@
 Sparky Dashboard
 The Sparky dashboard displays installed applications into a Yad based window. 
 
-Copyright (C) 2018 Paweł Pijanowski
+Copyright (C) 2018-2019 Paweł Pijanowski
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

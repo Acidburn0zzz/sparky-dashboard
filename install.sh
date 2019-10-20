@@ -17,7 +17,9 @@
 if [ "$1" = "uninstall" ]; then
 	rm -f /usr/bin/sparky-dashboard
    	rm -f /usr/share/applications/sparky-dashboard.desktop
+	rm -f /usr/share/pixmaps/sparky-dashboard.svg
 else
 	cp bin/* /usr/bin/
 	cp share/* /usr/share/applications/
+	cp pixmaps/* /usr/share/pixmaps/
 fi
